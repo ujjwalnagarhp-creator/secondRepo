@@ -1,5 +1,5 @@
 #include<stdio.h>
 int main(){
-    printf("OG FF");
+    printf("Greatest trash FF");
     return 0;
 }
