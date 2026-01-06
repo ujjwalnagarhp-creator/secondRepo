@@ -1,18 +1,21 @@
 #include <stdio.h>
+#include <string.h>
 
 int count(char sArr[][25],int n, char k[]){
-    printf("%s\n%s",sArr[0],k);
     int c=0;
     for(int i=0;i<n;i++){
-        if(sArr[i]==k){
-            printf("Yess\n");
-            c++;}
-        
+        if(!strcmp(sArr[i],k)){
+            c++;
+        }
     }return c;
 }
 
 int main(){
-    int n;scanf("%d",&n);
+    int n;
+    if(!scanf("%d",&n)){
+        printf("Enter a integer value");
+        return 0;
+    }
     if(n<=0){
         printf("Enter positive value of n");
         return 0;
@@ -27,10 +30,15 @@ int main(){
         }
     }
 
-    //printf("%s",sArr[0]);
+    
+    
 
     printf("Enter the string: ");
-    char k[25];scanf("%s",&k);
+    char k[25];
+    if(!scanf("%s",&k)){
+            printf("Enter valid string");
+            return 0;
+    }
 
     printf("%d",count(sArr,n,k));
 
