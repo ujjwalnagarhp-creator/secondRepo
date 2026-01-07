@@ -36,8 +36,8 @@ int main(){
     printf("Enter the string: ");
     char k[25];
     if(!scanf("%s",&k)){
-            printf("Enter valid string");
-            return 0;
+        printf("Enter valid string");
+        return 0;
     }
 
     printf("%d",count(sArr,n,k));
